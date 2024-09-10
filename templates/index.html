@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Attendance Form</title>
+    <!-- Link to CSS file -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+    <div class="form-container">
+        <h1>Student Attendance Form</h1>
+
+        <!-- Attendance Form -->
+        <form id="attendanceForm" method="POST" action="/add">
+            <div class="form-group">
+                <label for="register_no">Register No:</label>
+                <input type="text" id="register_no" name="register_no" placeholder="Enter your register number"
+                    required>
+            </div>
+
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="dept">Department:</label>
+                <input type="text" id="dept" name="dept" placeholder="Enter your department" required>
+            </div>
+
+            <div class="form-group">
+                <input type="checkbox" id="present" name="present">
+                <label class="checkbox-label" for="present">Present</label>
+            </div>
+
+            <!-- Submit Button -->
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+    <!-- Link to JavaScript file -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+
+</html>
